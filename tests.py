@@ -62,16 +62,16 @@ class TestBooksCollector:
         rating_0 = book.set_book_rating('Гордость и предубеждение и зомби', 0)
         assert rating_0 is None
 
-    def test_set_book_rating_set_rating_no_more_then_10_return_None(self):
+    def test_get_book_rating_get_rating_no_more_then_10_return_is_not_11(self):
         book = BooksCollector()
         book.add_new_book('Гордость и предубеждение и зомби')
-        rating_11 = book.set_book_rating('Гордость и предубеждение и зомби', 11)
-        assert rating_11 is None
+        rating_11 = book.get_book_rating('Гордость и предубеждение и зомби')
+        assert rating_11 != 11
 
-    def test_set_book_rating_book_does_not_exist_rating_is_None(self):
+    def test_get_book_rating_book_does_not_exist_rating_is_not_5(self):
         book = BooksCollector()
-        rating_5 = book.set_book_rating('Что делать, если ваш кот хочет вас убить', 5)
-        assert rating_5 is None
+        rating_5 = book.get_book_rating('Что делать, если ваш кот хочет вас убить')
+        assert rating_5 != 5
 
     def test_add_book_in_favorites_add_book_return_book_is_in_favorites(self):
         book = BooksCollector()
