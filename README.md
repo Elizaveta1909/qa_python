@@ -1,1 +1,26 @@
-# qa_python
+1. Проверка добавления книг в словарь:
+test_add_new_book_add_books_return_books_in_books_rating
+2. Нельзя добавить одну и ту же книгу дважды:
+test_add_new_book_add_same_book_in_books_rating_return_len_1
+3. Можно добавить две разные книги:
+test_get_books_rating_add_books_in_books_rating_return_len_2
+4. Нельзя выставить рейтинг книге, которой нет в списке:
+test_get_book_rating_get_rating_of_missing_book_return_None
+5. Проверка вывода списка книг с рейтингом 3:
+test_get_books_with_specific_rating_rating_does_not_exist_return_len_0
+6. Нельзя выставить рейтинг меньше 1:
+test_set_book_rating_set_rating_not_less_then_1_return_None
+7. Нельзя выставить рейтинг больше 10:
+test_get_book_rating_get_rating_no_more_then_10_return_is_not_11
+8. У не добавленной книги нет рейтинга:
+test_get_book_rating_book_does_not_exist_rating_is_not_5
+9. Добавление книги в избранное:
+test_add_book_in_favorites_add_book_return_book_is_in_favorites
+10. Нельзя добавить книгу в избранное, если её нет в словаре books_rating:
+test_add_book_in_favorites_add_book_not_from_books_rating_return_book_not_in_favorites
+11. Нельзя добавить одну и ту же книгу в избранное дважды:
+test_add_book_in_favorites_add_same_book_in_favorites_return_len_1
+12. Проверка получения списка избранных книг:
+test_get_list_of_favorites_books_get_list_of_2_books_return_len_2
+13. Проверка удаления книги из избранного:
+test_delete_book_from_favorites_delete_book_return_book_not_in_favorites
